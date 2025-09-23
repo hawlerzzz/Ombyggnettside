@@ -4,31 +4,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="./output.css" rel="stylesheet">
+
+    
+    
 </head>
 <body>
     <header>
-        <nav class="nav">
+        <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
             <div>
-                <img class="" src="/frontend/assets/ombyg.webp" alt="...">
+                <img class="w-80 cursor-pointer" src="assets/ombyg.webp" alt="...">
             </div>
 
             <div
-                class="">
-                <ul class="">
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-serif">
                     <li>
-                        <a class="" href="#">Nettbutikk</a>
+                        <a class="hover:text-gray-500" href="#">Nettbutikk</a>
                     </li>
                     <li>
-                        <a class="" href="#">Bli kunde</a>
+                        <a class="hover:text-gray-500" href="#">Bli kunde</a>
                     </li>
                     <li>
-                        <a class="" href="#">Sammarbeidspartnere</a>
+                        <a class="hover:text-gray-500" href="#">Sammarbeidspartnere</a>
                     </li>
                     <li>
-                        <a class="" href="#">Kontakt oss</a>
+                        <a class="hover:text-gray-500" href="#">Kontakt oss</a>
                     </li>
                 </ul>
             </div>
+
+            <div class="flex items-center gap-6">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+
         </nav>
     </header>
 </body>
