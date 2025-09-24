@@ -5,42 +5,166 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link href="./output.css" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 
     
     
 </head>
 <body>
     <header>
-        <header class="bg-white">
+        <header class="bg-[#153B83]">
         <nav class="flex justify-between items-center w-[92%]  mx-auto">
             <div>
-                <img class="w-80 cursor-pointer" src="assets/ombyg.webp" alt="...">
+                <img class="w-70 cursor-pointer" src="assets/ombyggwhite.webp" alt="...">
             </div>
 
             <div
-                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-serif">
+                class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-montserrat text-white">
                     <li>
-                        <a class="hover:text-gray-500" href="#">Nettbutikk</a>
+                        <a class="" href="#">Nettbutikk</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Bli kunde</a>
+                        <a class="" href="#">Bli kunde</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Sammarbeidspartnere</a>
+                        <a class="" href="#">Sammarbeidspartnere</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Kontakt oss</a>
+                        <a class="" href="#">Kontakt oss</a>
                     </li>
                 </ul>
             </div>
-
-            <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
-
         </nav>
     </header>
+
+    <div class="flex justify-center mt-60">
+        <input 
+            type="text" 
+            placeholder="Søk..." 
+            class="w-[70%] px-4 py-2 rounded-full border bg-gray-200 border-blue-400 outline focus:ring-2 focus:ring-[#153B83] font-poppins"
+        />
+    </div>
+
+    <!-- Section for categories-->
+    <div class=" max-w-screen-xl mx-auto grid grid-cols-8 gap-6 p-6 mt-5">
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/trelast.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">trelast</p>
+            </a>
+        </div>
+
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Utomrom.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Uterom</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/dør og vindu.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Dør og vindu</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Byggningsplater.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Byggningsplater</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/ISolasjon.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Isolasjon</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Elektrisk.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Elektrisk</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20"> 
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/trelast.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">VVS</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Møbler.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Møbler</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Stålprofiler.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Stålprofiler</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Bad.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Bad</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Gulv.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Gulv</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Byggevarer.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Byggevarer</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Kjøkken.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Kjøkken</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Fasade.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Fasade</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Støp og grunn.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Støp og grunn</p>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center w-20">
+            <a href="https://example.com" target="_blank">
+                <img src="assets/Ombygg__ikoner/Tak.png" alt="">
+                <p class="mt-2 text-center text-sm text-gray-800">Tak</p>
+            </a>
+        </div>
+
+    </div>
+
 </body>
 </html>
