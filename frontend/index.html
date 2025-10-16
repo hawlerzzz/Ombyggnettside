@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
 
     
@@ -14,36 +17,36 @@
 </head>
 <body>
     <header>
-        <header class="bg-[#153B83]">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+        <header class="bg-[#153B83] rounded-2xl py-4 mb-6 shadow-2xl">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto font-poppinss font-bold hover: transform-color duration-300">
             <div>
                 <img class="w-70 cursor-pointer" src="assets/ombyggwhite.webp" alt="...">
             </div>
 
-            <div
-                class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+            <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-montserrat text-white">
                     <li>
-                        <a class="" href="">Nettbutikk</a>
+                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="">Nettbutikk</a>
                     </li>
                     <li>
-                        <a class="" href="bliKunde.html">Bli kunde</a>
+                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="bliKunde.html">Bli kunde</a>
                     </li>
                     <li>
-                        <a class="" href="sammarbeidspartnere.html">Sammarbeidspartnere</a>
+                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="sammarbeidspartnere.html">Sammarbeidspartnere</a>
                     </li>
                     <li>
-                        <a class="" href="kontakt.html">Kontakt oss</a>
+                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="kontakt.html">Kontakt oss</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+  
     <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <!-- Step 1 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-lg mb-4">
+            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/product icon.jpg" alt="Finn produkt" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Finn produkt</h3>
@@ -52,7 +55,7 @@
 
         <!-- Step 2 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-lg mb-4">
+            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/shoppingcart icon.jpg" alt="Legg i handlekurv" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Legg i handlekurv</h3>
@@ -61,7 +64,7 @@
 
         <!-- Step 3 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-lg mb-4">
+            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/delivery icon.jpg" alt="Hent eller få varen sendt" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Hent eller få varen sendt</h3>
@@ -74,12 +77,16 @@
         <input 
             type="text" 
             placeholder="Søk..." 
-            class="w-[70%] px-4 py-2 rounded-full border bg-gray-200 border-blue-400 outline focus:ring-2 focus:ring-[#153B83] font-poppins"
-        />
+            class="w-3xl px-5 py-3 rounded-full border-2 border-blue-500 text-sm text-gray-800
+                focus:outline-none focus:border-white focus:text-black
+                transition-all duration-300 ease-in-out
+                focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
+                focus:scale-105"
+            />
     </div>
 
     <!-- Section for categories-->
-    <div class=" mt-7 max-w-screen-xl mx-auto grid grid-cols-8 gap-6 p-6">
+    <div class=" mt-7 max-w-screen-xl mx-auto grid grid-cols-8 justify-between gap-6 p-6">
 
         <div class="flex flex-col items-center w-20 border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
             <a href="https://example.com" target="_blank">
@@ -198,9 +205,9 @@
 
 <div class="max-w-7xl mx-auto">
   <h1 class="text-3xl font-bold text-blue-800 mb-8 text-center">Mest Populært</h1>
-
+<!--
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <!-- Listing 1 -->
+    Listing 1 
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Konstruksjonsvirke</h2>
@@ -212,9 +219,7 @@
       </div>
     </div>
 
-    <!-- Listings 2–8 -->
-    <!-- You can replace placeholder content with real data -->
-    <!-- Listing 2 -->
+   
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 2" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 2</h2>
@@ -226,7 +231,7 @@
       </div>
     </div>
 
-    <!-- Repeat Listing 3–8 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 3" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 3</h2>
@@ -238,7 +243,7 @@
       </div>
     </div>
 
-    <!-- Listing 4 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 4" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 4</h2>
@@ -250,7 +255,7 @@
       </div>
     </div>
 
-    <!-- Listing 5 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 5" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 5</h2>
@@ -262,7 +267,7 @@
       </div>
     </div>
 
-    <!-- Listing 6 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 6" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 6</h2>
@@ -274,7 +279,7 @@
       </div>
     </div>
 
-    <!-- Listing 7 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 7" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 7</h2>
@@ -286,7 +291,7 @@
       </div>
     </div>
 
-    <!-- Listing 8 -->
+    
     <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-4">
       <img src="https://via.placeholder.com/300x200" alt="Listing 8" class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
       <h2 class="text-lg font-semibold text-blue-700">Listing Title 8</h2>
@@ -296,6 +301,201 @@
         <button class="text-sm text-white bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded-md">Legg i handlekurv</button>
         <span class="text-xs text-gray-500">På lager</span>
     </div>
+    -->
+
+    <!--Section for most popular listings-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> 
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+        <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+        <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+        <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+        <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+            <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+            <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+    
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+            <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
+            <!-- Top Indicators -->
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs text-gray-500">3 produkter</span>
+                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Image -->
+            <img src="images/konstruksjonsvirke.jpg" alt="Konstruksjonsvirke"
+                class="rounded-md mb-3 w-full h-40 object-cover transform hover:scale-105 transition duration-300" />
+
+            <!-- Content -->
+            <h2 class="text-lg font-medium text-blue-700">Konstruksjonsvirke</h2>
+            <p class="text-sm font-light text-gray-600">38x100 mm, 4.2 m</p>
+            <p class="text-green-700 font-bold bg-green-100 border border-green-500 rounded-md px-2 py-1 inline-block mt-1">Fra 15kr</p>
+            <span class="text-xs font-medium text-white bg-blue-600 rounded-full px-2 py-0.5 mt-2 inline-block">Enkelt</span>
+        </div>
+
+        <script>
+            function showInlineMessage() {
+                const msg = document.getElementById('inline-message');
+                msg.classList.remove('opacity-0');
+                msg.classList.add('opacity-100');
+
+            setTimeout(() => {
+                msg.classList.remove('opacity-100');
+                msg.classList.add('opacity-0');
+            }, 2500);
+        }     
+
+            document.getElementById('like-btn').addEventListener('click', function () {
+            this.classList.toggle('text-[#153B83]');
+        });
+        </script>
+
+            
+
+
+        
+    </div>
+
+   
+
+
+
+
 </div>
 
 
