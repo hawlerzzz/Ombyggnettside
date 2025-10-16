@@ -3,71 +3,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    <header>
-        <header class="bg-[#153B83]">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
-            <div>
-                <img class="w-70 cursor-pointer" src="assets/ombyggwhite.webp" alt="...">
-            </div>
 
-            <div
-                class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-montserrat text-white">
-                    <li>
-                        <a class="" href="#">Nettbutikk</a>
-                    </li>
-                    <li>
-                        <a class="" href="#">Bli kunde</a>
-                    </li>
-                    <li>
-                        <a class="" href="#">Sammarbeidspartnere</a>
-                    </li>
-                    <li>
-                        <a class="" href="kontakt.html">Kontakt oss</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<div class="min-h-screen flex flex-col lg:flex-row">
+    
+    <!-- Left Side - Info Panel -->
+    <div class="lg:w-1/2 p-10 bg-gradient-to-br from-blue-700 to-blue-900 text-white flex flex-col justify-center">
+      <h1 class="text-4xl font-extrabold mb-6 leading-tight">Kontakt Oss<br></h1>
+      <p class="text-blue-200 text-lg mb-10">
+        Har du spørsmål eller lignende? Vi er her for å hjelpe! Fyll ut skjemaet eller ring oss så tar vi kontakt med deg så snart som mulig.
+      </p>
 
-    <section class="bg-gray-100 py-12 px-6">
-        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h2 class="text-3xl font-bold text-center mb-6">Kontakt oss</h2>
-
-        <!-- Contact Info -->
-        <div class="mb-8 text-center text-gray-700">
-            <p>📍 Adresse: Industriveien 12, Kristiansand</p>
-            <p>📞 Telefon: +47 123 45 678</p>
-            <p>✉️ E-post: kontakt@ombygg.no</p>
+      <div class="space-y-4 text-blue-100">
+        <div class="flex items-center space-x-3">
+          <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span>post@ombygg.no</span>
         </div>
-
-        <!-- Contact Form -->
-        <form class="grid grid-cols-1 gap-6">
-            <div>
-            <label for="name" class="block text-sm font-medium text-gray-700">Navn</label>
-            <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        <div class="flex items-center space-x-3">
+          <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l.4 2M7 13h10l1.5-8H6.5M7 13l-1 5h12l-1-5M5 21h14"/>
+          </svg>
+          <span>22 12 02 84</span>
         </div>
-
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">E-post</label>
-        <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        <div class="flex items-center space-x-3">
+          <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657A8 8 0 018.343 7.343m9.314 9.314A8 8 0 017.343 8.343M12 20v.01M12 4v.01"/>
+          </svg>
+          <span>Økern Torgvei 6, 0580 Oslo</span>
+        </div>
       </div>
+    </div>
 
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700">Melding</label>
-        <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
-      </div>
-
-      <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
-                    Send melding
-                </button>
-        </form>
+    <!-- Right Side - Form -->
+    <div class="lg:w-1/2 bg-white p-10 flex items-center justify-center">
+      <form class="w-full max-w-lg bg-white shadow-xl rounded-lg p-8 space-y-6">
+        <h2 class="text-3xl font-bold text-blue-800 mb-4">Send oss en epost</h2>
+        
+        <div>
+          <label class="block text-blue-700 font-semibold mb-2">Ditt navn</label>
+          <input type="text" placeholder="Jon Jonsen" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required>
         </div>
-    </section>
 
+        <div>
+          <label class="block text-blue-700 font-semibold mb-2">E-post</label>
+          <input type="email" placeholder="Jon@eksempel.com" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <div>
+          <label class="block text-blue-700 font-semibold mb-2">Melding</label>
+          <textarea rows="5" placeholder="Din melding..." class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-blue-700 text-white font-semibold rounded-md hover:bg-blue-800 transition">
+          Send E-post
+        </button>
+      </form>
+    </div>
+  </div>
     
 </body>
 </html>
