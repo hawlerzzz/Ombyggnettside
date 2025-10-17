@@ -11,6 +11,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     
     
@@ -77,7 +79,6 @@
         <input 
             type="text" 
             placeholder="Søk..." 
-               
             class="w-3xl px-5 py-3 rounded-full border-2 border-blue-500 text-sm text-gray-800
                 focus:outline-none focus:border-white focus:text-black
                 transition-all duration-300 ease-in-out
@@ -90,7 +91,7 @@
     <div class=" mt-7 max-w-screen-xl mx-auto grid grid-cols-8 justify-between gap-6 p-6">
 
         <div class="flex flex-col items-center w-20 border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
-            <a href="https://example.com" target="_blank">
+            <a href="trelast.html" target="_blank">
                 <img src="assets/Ombygg__ikoner/trelast.png" alt="">
                 <p class="mt-2 text-center text-sm text-gray-800">trelast</p>
             </a>
@@ -202,20 +203,22 @@
             </a>
         </div>
 
+    </div>
 
+    <div class="justify-center flex mt-15 text-3xl font-semibold text-blue-950">
+        <h1>Mest Populært</h1>
 
-<div class="max-w-7xl mx-auto">
-  <h1 class="text-3xl font-bold text-blue-800 mb-8 text-center">Mest Populært</h1>
+    </div>
 
     <!--Section for most popular listings-->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> 
+    <div class="grid grid-cols-4 gap-6 max-w-6xl mx-auto px-4 py-12"> 
 
         <div class="relative bg-white rounded-[6px] border-[0.5px] border-[#EDEDED] shadow-[0px_2.3px_4.5px_#B4B3B3] p-4 max-w-sm mx-auto">
         <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -234,8 +237,8 @@
         <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -255,8 +258,8 @@
         <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -275,8 +278,8 @@
         <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -295,8 +298,8 @@
             <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -315,8 +318,8 @@
             <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -336,8 +339,8 @@
             <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -356,8 +359,8 @@
             <!-- Top Indicators -->
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs text-gray-500">3 produkter</span>
-                <button id="like-btn" class="text-gray-400 hover:text-[#153B83] transition-colors duration-300">
-                    ❤️
+                <button id="like-btn" class="">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
 
@@ -382,17 +385,11 @@
                 msg.classList.remove('opacity-100');
                 msg.classList.add('opacity-0');
             }, 2500);
-        }     
-
+        } 
             document.getElementById('like-btn').addEventListener('click', function () {
             this.classList.toggle('text-[#153B83]');
         });
         </script>
-
-            
-
-
-        
     </div>
 
 
