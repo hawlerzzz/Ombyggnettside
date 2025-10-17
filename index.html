@@ -18,37 +18,66 @@
     
 </head>
 <body>
-    <header>
-        <header class="bg-[#153B83] rounded-2xl py-4 mb-6 shadow-2xl">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto font-poppinss font-bold hover: transform-color duration-300">
-            <div>
-                <img class="w-70 cursor-pointer" src="/assets/ombyggwhite.webp" alt="...">
+    <header class="bg-[#153B83] top-0 z-50 shadow-lg">
+        <div class="max-w-[1300px] mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-3">
+                <img src="/assets/ombyggwhite.webp" alt="Ombygg logo" class="w-36">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-10 font-montserrat text-white font-semibold tracking-wide">
+                <a href="" class="relative group">
+                    <span class="hover:text-gray-300 transition duration-300">Nettbutikk</span>
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="bliKunde.html" class="relative group">
+                    <span class="hover:text-gray-300 transition duration-300">Bli kunde</span>
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="sammarbeidspartnere.html" class="relative group">
+                    <span class="hover:text-gray-300 transition duration-300">Samarbeidspartnere</span>
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="kontakt.html" class="relative group">
+                    <span class="hover:text-gray-300 transition duration-300">Kontakt oss</span>
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-full bg-[#153B83] transform -translate-x-full transition-transform duration-500 ease-in-out">
+                <div class="px-6 py-10 flex flex-col gap-6 font-montserrat text-white font-semibold text-lg">
+                    <a href="" class="hover:text-gray-300 transition duration-300">Nettbutikk</a>
+                    <a href="bliKunde.html" class="hover:text-gray-300 transition duration-300">Bli kunde</a>
+                    <a href="sammarbeidspartnere.html" class="hover:text-gray-300 transition duration-300">Samarbeidspartnere</a>
+                    <a href="kontakt.html" class="hover:text-gray-300 transition duration-300">Kontakt oss</a>
+                </div>
             </div>
 
-            <div class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-montserrat text-white">
-                    <li>
-                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="">Nettbutikk</a>
-                    </li>
-                    <li>
-                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="bliKunde.html">Bli kunde</a>
-                    </li>
-                    <li>
-                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="sammarbeidspartnere.html">Sammarbeidspartnere</a>
-                    </li>
-                    <li>
-                        <a class="bg-[#153B83] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-lg px-6 py-4 cursor-pointer" href="kontakt.html">Kontakt oss</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <script>
+                const toggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                toggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('-translate-x-full');
+                });
+            </script>
     </header>
 
-  
     <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <!-- Step 1 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
+            <div class="w-30 h-30 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/product icon.jpg" alt="Finn produkt" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Finn produkt</h3>
@@ -57,7 +86,7 @@
 
         <!-- Step 2 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
+            <div class="w-30 h-30 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/shoppingcart icon.jpg" alt="Legg i handlekurv" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Legg i handlekurv</h3>
@@ -66,7 +95,7 @@
 
         <!-- Step 3 -->
         <div class="flex flex-col items-center">
-            <div class="w-40 h-40 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
+            <div class="w-30 h-30 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
                 <img src="images/delivery icon.jpg" alt="Hent eller få varen sendt" class="w-full h-full object-cover" />
             </div>
             <h3 class="text-xl font-semibold mb-2">Hent eller få varen sendt</h3>
@@ -87,10 +116,10 @@
             />
     </div>
 
-    <!-- Section for categories-->
+    <!-- Section for kategorier
     <div class=" mt-7 max-w-screen-xl mx-auto grid grid-cols-8 justify-between gap-6 p-6">
 
-        <div class="flex flex-col items-center w-20 border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
+        <div class="flex flex-col items-center w-15 h-15 border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
             <a href="trelast.html" target="_blank">
                 <img src="/Ombygg__ikoner/trelast.png" alt="">
                 <p class="mt-2 text-center text-sm text-gray-800">trelast</p>
@@ -98,7 +127,7 @@
         </div>
 
 
-        <div class="flex flex-col items-center w-20 border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
+        <div class="flex flex-col items-center w- border border-gray-300 rounded-lg p-2 hover:shadow-lg hover:border-blue-500 transition duration-300">
             <a href="https://example.com" target="_blank">
                 <img src="/Ombygg__ikoner/Utomrom.png" alt="">
                 <p class="mt-2 text-center text-sm text-gray-800">Uterom</p>
@@ -204,10 +233,108 @@
         </div>
 
     </div>
+-->
+    <div class="mt-10 max-w-screen-xl mx-auto grid grid-cols-8 gap-x-2 gap-y-1 justify-center p-2">
+
+        <!-- Bad -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Bad.png" alt="Bad" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Bad</span>
+        </a>
+
+        <!-- Byggevarer -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Byggevarer.png" alt="Byggevarer" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Byggevarer</span>
+        </a>
+
+        <!-- Bygningsplater -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Bygningsplater.png" alt="Bygningsplater" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Bygningsplater</span>
+        </a>
+
+        <!-- Dør og vindu -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/dør og vindu.png" alt="Dør og vindu" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Dør og vindu</span>
+        </a>
+
+        <!-- Elektrisk -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Elektrisk.png" alt="Elektrisk" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Elektrisk</span>
+        </a>
+
+        <!-- Fasade -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Fasade.png" alt="Fasade" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Fasade</span>
+        </a>
+
+        <!-- Gulv -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Gulv.png" alt="Gulv" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Gulv</span>
+        </a>
+
+        <!-- Isolasjon -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Isolasjon.png" alt="Isolasjon" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Isolasjon</span>
+        </a>
+
+        <!-- Kjøkken -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Kjøkken.png" alt="Kjøkken" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Kjøkken</span>
+        </a>
+
+        <!-- Møbler -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Møbler.png" alt="Møbler" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Møbler</span>
+        </a>
+
+        <!-- Stålprofiler -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Stålprofiler.png" alt="Stålprofiler" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Stålprofiler</span>
+        </a>
+
+        <!-- Støp og grunn -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Støp og grunn.png" alt="Støp og grunn" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Støp og grunn</span>
+        </a>
+
+        <!-- Tak -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Tak.png" alt="Tak" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Tak</span>
+        </a>
+
+        <!-- Trelast -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/trelast.png" alt="Trelast" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Trelast</span>
+        </a>
+
+        <!-- Uterom -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/Utomrom.png" alt="Uterom" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Uterom</span>
+        </a>
+
+        <!-- VVS -->
+        <a href="#" class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <img src="/Ombygg__ikoner/VVS.png" alt="VVS" class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
+            <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">VVS</span>
+        </a>
+</div>
 
     <div class="justify-center flex mt-15 text-3xl font-semibold text-blue-950">
         <h1>Mest Populært</h1>
-
     </div>
 
     <!--Section for most popular listings-->
