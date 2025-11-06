@@ -19,16 +19,16 @@
 
 </head>
 
-<body>
-    <header class="bg-[#153B83] top-0 z-50 shadow-lg">
+<body class="bg-gradient-to-b from-20% to-50% from-blue-100 to-0%">
+    <header class="bg-[#153B83] bg-gradient-to-br from-[#153b8] mt-5 ml-5 mr-5 rounded-3xl shadow-lg">
         <div class="max-w-[1300px] mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
-            <a href="/" class="flex items-center gap-3">
-                <img src="/assets/ombyggwhite.webp" alt="Ombygg logo" class="w-36">
+            <a href="/" class="flex items-center gap-3 ">
+                <img src="/images/ombyggL.png" alt="Ombygg logo" class="w-46">
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex gap-10 font-montserrat text-white font-semibold tracking-wide">
+            <nav class="hidden md:flex gap-10 font-montserrat text-white font-semibold tracking-wide justify-center text-center">
                 <a href="" class="relative group">
                     <span class="hover:text-gray-300 transition duration-300">Nettbutikk</span>
                     <span
@@ -81,38 +81,8 @@
             });
         </script>
     </header>
+    
 
-    <!--Info section-->
-    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <!-- Step 1 -->
-        <div class="flex flex-col items-center">
-            <div class="w-30 h-30 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
-                <img src="images/Product box.png" alt="Finn produkt" class="w-full h-full object-cover" />
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Finn produkt</h3>
-            <p class="text-gray-600 text-sm">Søk etter varekategori eller skriv inn produktet du trenger</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="flex flex-col items-center">
-            <div class="w-30 h-30 rounded-full overflow-hidden shadow-2xl mb-4">
-                <img src="images/Shoppingcart.webp" alt="Legg i handlekurv" class="w-full h-full object-cover" />
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Legg i handlekurv</h3>
-            <p class="text-gray-600 text-sm">Legg inn varene du ønsker deg i handlekurven, og send en forespørsel.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="flex flex-col items-center">
-            <div class="w-30 h-30 rounded-full border-2 border-blue-400 overflow-hidden shadow-2xl mb-4">
-                <img src="images/Delivery.png" alt="Hent eller få varen sendt"
-                    class="w-full h-full object-cover" />
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Hent eller få varen sendt</h3>
-            <p class="text-gray-600 text-sm">Vi følger deg opp med ønsket betalingsløsning, og tilbud om henting eller
-                levering av varen</p>
-        </div>
-    </div>
 
     <!--Søkefelt-->
     <div class="flex justify-center mt-10">
@@ -120,7 +90,7 @@
                 focus:outline-none focus:border-white focus:text-black
                 transition-all duration-300 ease-in-out
                 focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
-                focus:scale-105" />
+                focus:scale-105 bg-white" />
     </div>
 
     <!--Kategorier-->
