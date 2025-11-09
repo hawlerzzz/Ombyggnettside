@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bli Kunde - Opplev Forskjellen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tilpasser temaet for å legge til våre egne blåfarger (valgfritt, men gir kontroll)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-light': '#EBF8FF', // En veldig lys blå (bg-blue-50)
+                        'brand-base': '#3182CE', // En solid blå (bg-blue-600)
+                        'brand-medium': '#2B6CB0', // En mørkere blå (bg-blue-700)
+                        'brand-dark': '#1A365D',  // En veldig mørk blå (bg-blue-900)
+                    },
+                    boxShadow: {
+                        // Legger til en mer definert skygge for "ikke-flatt" design
+                        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Bruker de importerte fontene */
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+    
+     .gradient-header {
+      background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+    }
+
+    .nav-item {
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.2s ease;
+    }
+
+    .nav-item:hover::after {
+      width: 80%;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .search-input {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- HEADER -->
+  <header class="gradient-header">
+    <!-- Top Bar -->
+    <div class="border-b border-white/10">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="images/ombyggL.png" alt="Ombygg Logo" class="w-44 h-auto object-contain">
+          </div>
+
+          <!-- Search Bar -->
+          <div class="flex justify-center flex-1 mx-8">
+            <input type="text" placeholder="Søk blant 64 000 produkter" class="search-input w-full max-w-2xl px-6 py-3 rounded-full border-2 border-blue-500 text-sm text-gray-800
+              focus:outline-none focus:border-white focus:text-black
+              transition-all duration-300 ease-in-out
+              focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
+              bg-white" />
+          </div>
+
+          <!-- Top Actions -->
+          <div class="flex items-center gap-3">
+            <button
+              class="flex items-center gap-2 text-white hover:text-blue-200 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span class="text-sm">Min Side</span>
+            </button>
+            <button
+              class="flex items-center gap-2 text-white hover:text-blue-200 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-all relative">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="text-sm">Handlekurv</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="container mx-auto px-6">
+      <nav class="flex items-center">
+        <button class="btn-primary text-white px-6 py-3.5 flex items-center gap-2 font-medium rounded-none">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          Produkter
+        </button>
+        <!-- Nettbutikk -->
+        <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+          </svg>
+
+          Nettbutikk
+
+        </button>
+
+        <!-- Bli kunde -->
+        <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center-gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+          </svg>
+
+          Bli kunde
+        </button>
+
+        <!-- Kontakt oss -->
+        <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+          </svg>
+
+          Kontakt oss
+        </button>
+
+        <!-- Samarbeidspartnere -->
+        <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+          </svg>
+
+          Samarbeidspartnere
+        </button>
+
+
+        <div class="ml-auto flex items-center gap-4">
+          <button class="nav-item px-5 py-3.5 text-white text-sm font-medium">Velg butikk</button>
+          <div class="h-8 w-px bg-white/20"></div>
+          <button class="text-white hover:text-blue-200 text-sm font-medium px-3 py-2">NO</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+    <section class="bg-gradient-to-br from-brand-base to-brand-dark text-white pt-24 pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                Start din reise med oss i dag
+            </h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+                Opplev en enklere hverdag med våre skreddersydde løsninger. Å bli kunde tar kun et par minutter.
+            </p>
+            <div>
+                <a href="#fordeler" class="bg-white text-brand-base font-bold px-8 py-4 rounded-full text-lg hover:bg-gray-100 transform hover:scale-105 shadow-lg transition duration-300">
+                    Se fordelene
+                </a>
+                <a href="#prosess" class="ml-4 border border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white hover:text-brand-base transition duration-300">
+                    Slik fungerer det
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fordeler" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-brand-dark mb-4">Hvorfor velge oss?</h2>
+            <p class="text-center text-gray-600 text-lg max-w-xl mx-auto mb-16">
+                Vi er ikke bare en leverandør – vi er din partner.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded-xl shadow-card transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-brand-light text-brand-base rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Førsteklasses Støtte</h3>
+                    <p class="text-gray-600">
+                        Vårt team er her for deg 24/7. Du snakker alltid med ekte mennesker som ønsker å hjelpe.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-card transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-brand-light text-brand-base rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.866 10.74 9 12.728 5.134-1.988 9-7.137 9-12.728v-.001z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Trygt og Sikkert</h3>
+                    <p class="text-gray-600">
+                        Med bransjeledende sikkerhetstiltak er dine data alltid trygge hos oss.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-card transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-brand-light text-brand-base rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Konstant Innovasjon</h3>
+                    <p class="text-gray-600">
+                        Du får alltid tilgang til de nyeste og mest effektive verktøyene på markedet.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="prosess" class="py-24 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-brand-dark mb-16">
+                Kom i gang på 3 enkle steg
+            </h2>
+
+            <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-12">
+                
+                <div class="flex-1 text-center">
+                    <div class="bg-brand-base text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">1</div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Velg din pakke</h3>
+                    <p class="text-gray-600">
+                        Se gjennom våre løsninger og finn den som passer best for dine behov.
+                    </p>
+                </div>
+
+                <div class="flex-1 text-center">
+                    <div class="bg-brand-base text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">2</div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Opprett konto</h3>
+                    <p class="text-gray-600">
+                        Fyll ut skjemaet med din informasjon. Dette er raskt og uforpliktende.
+                    </p>
+                </div>
+
+                <div class="flex-1 text-center">
+                    <div class="bg-brand-base text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">3</div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">Start reisen</h3>
+                    <p class="text-gray-600">
+                        Du får umiddelbar tilgang og kan begynne å utforske alle fordelene.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="text-3xl font-bold text-brand-dark mb-8">Ikke bare ta vårt ord for det</h2>
+            <div class="bg-brand-light p-10 rounded-xl shadow-inner">
+                <p class="text-xl text-brand-dark italic leading-relaxed">
+                    "Etter at vi byttet til Bedrift AS har alt blitt så mye enklere. Støtten vi får er i verdensklasse, og vi ser allerede store resultater. Anbefales på det sterkeste!"
+                </p>
+                <p class="mt-6 font-bold text-brand-medium text-lg">
+                    – Kari Nordmann
+                </p>
+                <p class="text-gray-600">Daglig leder i Eksempel AS</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-dark text-white">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Klar til å bli kunde?</h2>
+            <p class="text-xl text-blue-200 max-w-xl mx-auto mb-10">
+                La oss hjelpe deg å nå dine mål. Bli en del av familien i dag.
+            </p>
+            <a href="#registrer" class="bg-brand-base text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-brand-medium shadow-lg transform hover:scale-105 transition duration-300">
+                Start registreringen nå
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-blue-950 text-blue-200 py-16">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between">
+            
+            <div class="mb-8 md:mb-0 md:w-1/3">
+                <h4 class="text-2xl font-bold text-white mb-4">Bedrift AS</h4>
+                <p class="text-blue-300">Org.nr: 987 654 321</p>
+                <p class="text-blue-300">Adresseveien 1, 0123 Oslo</p>
+                <p class="text-blue-300">kontakt@bedrift.no</p>
+            </div>
+
+            <div class="mb-8 md:mb-0">
+                <h5 class="text-lg font-semibold text-white mb-4">Snarveier</h5>
+                <ul>
+                    <li><a href="#" class="hover:text-white">Våre Tjenester</a></li>
+                    <li><a href="#" class="hover:text-white">Priser</a></li>
+                    <li><a href="#" class="hover:text-white">Om Oss</a></li>
+                    <li><a href="#" class="hover:text-white">Karriere</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-lg font-semibold text-white mb-4">Informasjon</h5>
+                <ul>
+                    <li><a href="#" class="hover:text-white">Personvernerklæring</a></li>
+                    <li><a href="#" class="hover:text-white">Betingelser</a></li>
+                    <li><a href="#" class="hover:text-white">Informasjonskapsler</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="text-center text-blue-400 border-t border-blue-800 mt-12 pt-8">
+            &copy; 2025 Bedrift AS. Alle rettigheter reservert.
+        </div>
+    </footer>
+
+</body>
+</html>
