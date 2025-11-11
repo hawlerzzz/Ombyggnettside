@@ -5,53 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Side - Ombygg</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
-        .gradient-header {
-            background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
-        }
-
-        .nav-item {
-            position: relative;
-            transition: all 0.2s ease;
-        }
-
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: width 0.2s ease;
-        }
-
-        .nav-item:hover::after {
-            width: 80%;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
-            transform: translateY(-1px);
-        }
-
-        .search-input {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.2s ease;
-        }
-
-        .search-input:focus {
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+        
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -64,7 +19,9 @@
                 <div class="flex items-center justify-between">
                     <!-- Logo -->
                     <div class="flex items-center">
-                        <img src="images/ombyggL.png" alt="Ombygg Logo" class="w-44 h-auto object-contain">
+                        <a href="index.html">
+                            <img src="images/ombyggL.png" alt="Ombygg Logo" class="w-44 h-auto object-contain">
+                        </a>
                     </div>
 
                     <!-- Search Bar -->

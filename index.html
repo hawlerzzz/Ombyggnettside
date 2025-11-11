@@ -4,55 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ombygg - For profesjonelle</title>
+    <title>Ombygg</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .gradient-header {
-            background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
-        }
-
-        .nav-item {
-            position: relative;
-            transition: all 0.2s ease;
-        }
-
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: width 0.2s ease;
-        }
-
-        .nav-item:hover::after {
-            width: 80%;
-        }
-
-        .btn-primary {
-            background: #2563eb;
-            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
-            transform: translateY(-1px);
-        }
-
-        .search-input {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.2s ease;
-        }
-
-        .search-input:focus {
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -71,10 +25,10 @@
                     <!-- Search Bar -->
                     <div class="flex justify-center flex-1 mx-8">
                         <input type="text" placeholder="Søk blant 64 000 produkter" class="search-input w-full max-w-2xl px-6 py-3 rounded-full border-2 border-blue-500 text-sm text-gray-800
-              focus:outline-none focus:border-white focus:text-black
-              transition-all duration-300 ease-in-out
-              focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
-              bg-white" />
+                            focus:outline-none focus:border-white focus:text-black
+                            transition-all duration-300 ease-in-out
+                            focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
+                        bg-white" />
                     </div>
 
                     <div class="flex items-center gap-3">
@@ -266,146 +220,158 @@
 
 
     <!-- CATEGORIES -->
-    <section class="container mx-auto px-6 mt-16 mb-20">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">
-            Utforsk våre kategorier
-        </h2>
+    <section class="container mx-auto px-6 mt-8 mb-20">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold bg-clip-text text-blue-900 blue mb-4">
+                Utforsk kategorier
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Finn alt du trenger for ditt byggeprosjekt</p>
+        </div>
 
-        <!--Kategorier-->
-        <div class="grid grid-cols-8 gap-x-1 justify-center items-center mt-10 w-fit mx-auto">
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-6 max-w-7xl mx-auto">
             <!-- Bad -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Bad.png" alt="Bad"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Bad</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Bad.png" alt="Bad" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Bad</span>
+                </div>
             </a>
 
             <!-- Byggevarer -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Byggevarer.png" alt="Byggevarer"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span
-                    class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Byggevarer</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Byggevarer.png" alt="Byggevarer" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Byggevarer</span>
+                </div>
             </a>
 
             <!-- Bygningsplater -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Byggningsplater.png" alt="Bygningsplater"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span
-                    class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Bygningsplater</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Byggningsplater.png" alt="Bygningsplater" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Bygningsplater</span>
+                </div>
             </a>
 
             <!-- Dør og vindu -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/dør og vindu.png" alt="Dør og vindu"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Dør og
-                    vindu</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/dør og vindu.png" alt="Dør og vindu" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Dør og vindu</span>
+                </div>
             </a>
 
             <!-- Elektrisk -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Elektrisk.png" alt="Elektrisk"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span
-                    class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Elektrisk</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Elektrisk.png" alt="Elektrisk" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Elektrisk</span>
+                </div>
             </a>
 
             <!-- Fasade -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Fasade.png" alt="Fasade"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Fasade</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Fasade.png" alt="Fasade" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Fasade</span>
+                </div>
             </a>
 
             <!-- Gulv -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Gulv.png" alt="Gulv"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Gulv</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Gulv.png" alt="Gulv" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Gulv</span>
+                </div>
             </a>
 
             <!-- Isolasjon -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Isolasjon.png" alt="Isolasjon"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span
-                    class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Isolasjon</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Isolasjon.png" alt="Isolasjon" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Isolasjon</span>
+                </div>
             </a>
 
             <!-- Kjøkken -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Kjøkken.png" alt="Kjøkken"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Kjøkken</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Kjøkken.png" alt="Kjøkken" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Kjøkken</span>
+                </div>
             </a>
 
             <!-- Møbler -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Møbler.png" alt="Møbler"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Møbler</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Møbler.png" alt="Møbler" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Møbler</span>
+                </div>
             </a>
 
             <!-- Stålprofiler -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="Ombygg__ikoner/Stålprofiler.png" alt="Stålprofiler"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span
-                    class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Stålprofiler</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Stålprofiler.png" alt="Stålprofiler" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Stålprofiler</span>
+                </div>
             </a>
 
             <!-- Støp og grunn -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Støp og grunn.png" alt="Støp og grunn"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Støp og
-                    grunn</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Støp og grunn.png" alt="Støp og grunn" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Støp og grunn</span>
+                </div>
             </a>
 
             <!-- Tak -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Tak.png" alt="Tak"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Tak</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Tak.png" alt="Tak" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Tak</span>
+                </div>
             </a>
 
             <!-- Trelast -->
-            <a href="trelast.html"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/trelast.png" alt="Trelast"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Trelast</span>
+            <a href="trelast.html" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/trelast.png" alt="Trelast" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Trelast</span>
+                </div>
             </a>
 
             <!-- Uterom -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/Utomrom.png" alt="Uterom"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">Uterom</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/Utomrom.png" alt="Uterom" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">Uterom</span>
+                </div>
             </a>
 
             <!-- VVS -->
-            <a href="#"
-                class="group flex flex-col items-center justify-center border border-gray-300 bg-white rounded-xl p-2 w-20 h-20 hover:bg-blue-50 hover:border-blue-400 hover:shadow-sm transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <img src="/Ombygg__ikoner/VVS.png" alt="VVS"
-                    class="w-8 h-8 object-contain mb-1 transition-transform duration-300 group-hover:scale-110">
-                <span class="text-[10px] text-center text-gray-800 font-medium group-hover:text-blue-600">VVS</span>
+            <a href="#" class="group">
+                <div class="relative bg-white rounded-2xl p-6 h-40 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-transparent hover:border-blue-400">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="/Ombygg__ikoner/VVS.png" alt="VVS" class="w-16 h-16 object-contain mb-3 relative z-10 transition-transform duration-300 group-hover:scale-125">
+                    <span class="text-sm font-semibold text-gray-800 group-hover:text-blue-600 relative z-10 transition-colors duration-300">VVS</span>
+                </div>
             </a>
         </div>
     </section>
