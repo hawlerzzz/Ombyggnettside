@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 .gradient-header {
             background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
         }
