@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donere Byggevarer - Ombygg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="gradient-header">
+        <div class="border-b border-white/10">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a href="index.html">
+                            <img src="images/ombyggL.png" alt="Ombygg Logo" class="w-44 h-auto object-contain">
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center flex-1 mx-8">
+                        <input type="text" placeholder="Søk blant 64 000 produkter" class="w-full max-w-2xl px-6 py-3 rounded-full border-2 border-blue-500 text-sm text-gray-800
+                     focus:outline-none focus:border-white focus:text-black
+                     transition-all duration-300 ease-in-out
+                     focus:shadow-[0_0_15px_rgba(21,59,131,0.5)]
+                     bg-white" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);" />
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <a href="minside.html"
+                            class="flex items-center gap-2 text-white hover:text-blue-200 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-all">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                            <span class="text-sm">Min Side</span>
+                        </a>
+                        <button
+                            class="flex items-center gap-2 text-white hover:text-blue-200 font-medium px-4 py-2 rounded-lg hover:bg-white/10 transition-all relative">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="text-sm">Handlekurv</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <nav class="flex items-center">
+                <a href="donere.html"
+                    class="btn-primary active text-white px-6 py-3.5 flex items-center gap-2 font-medium rounded-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                    </svg>
+                    Donere byggevarer?
+                </a>
+
+                <a href="index.html#Categories"
+                    class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                    </svg>
+                    Kategorier
+                </a>
+
+                <a href="bliKunde.html">
+                    <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                        </svg>
+                        Bli kunde
+                    </button>
+                </a>
+
+                <a href="kontakt.html">
+                    <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                        </svg>
+                        Kontakt oss
+                    </button>
+                </a>
+
+                <a href="sammarbeidspartnere.html">
+                    <button class="nav-item px-6 py-3.5 text-white text-sm font-medium flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                        </svg>
+                        Samarbeidspartnere
+                    </button>
+                </a>
+
+                <div class="ml-auto flex items-center gap-4">
+                    <button class="nav-item px-5 py-3.5 text-white text-sm font-medium">Velg butikk</button>
+                    <div class="h-8 w-px bg-white/20"></div>
+                    <button class="text-white hover:text-blue-200 text-sm font-medium px-3 py-2">NO</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-header text-white py-20">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                Donere Byggevarer
+            </h1>
+            <p class="text-xl text-blue-100 mx-auto mt-4 mb-8">
+                Hjelp oss å gjøre en forskjell, doner ubrukte eller brukte byggevarer og bidra til en mer bærekraftig
+                fremtid
+            </p>
+            <a href="#donation-form"
+                class="bg-white text-blue-700 font-bold text-lg px-8 py-4 rounded-full hover:bg-blue-100 transition inline-block">
+                Doner nå
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-16">
+
+                <!-- Left Column - Form -->
+                <div class="md:col-span-3 order-2 md:order-1">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-2">Hvorfor donere byggevarer?</h2>
+                    <p class="text-gray-600 mb-8">
+                        Har du byggevarer som du ikke lenger trenger? I stedet for å kaste dem, kan du donere dem til
+                        oss!
+                        Vi tar imot ubrukte eller lett brukte byggematerialer som kan gjenbrukes i nye prosjekter. Din
+                        donasjon bidrar til å redusere avfall, spare miljøet, og hjelpe andre med å realisere sine
+                        byggeprosjekter.
+                    </p>
+
+                    <!-- Benefits Grid -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-12">
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                            <div
+                                class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
+                                </svg>
+
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Miljøvennlig</h3>
+                            <p class="text-sm text-gray-600">Reduser avfall og bidra til en mer bærekraftig fremtid</p>
+                        </div>
+
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                            <div
+                                class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Hjelp andre</h3>
+                            <p class="text-sm text-gray-600">Dine materialer kan hjelpe andre med å fullføre sine
+                                prosjekter</p>
+                        </div>
+
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 text-center">
+                            <div
+                                class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-purple-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Gratis henting</h3>
+                            <p class="text-sm text-gray-600">Vi tilbyr gratis henting av større donasjoner</p>
+                        </div>
+                    </div>
+
+                    <!-- What We Accept -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-blue-800 mb-6">Hva tar vi imot?</h2>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+                                <h3 class="text-xl font-bold text-green-800 mb-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Vi tar imot
+                                </h3>
+                                <ul class="space-y-2 text-sm text-gray-700">
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Trelast og konstruksjonsvirke
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Fliser og gulvmaterialer
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Dører og vinduer
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Isolasjonsmaterialer
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Maling og lakk
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Elektrisk utstyr
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        Verktøy i god stand
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+                                <h3 class="text-xl font-bold text-red-800 mb-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Vi tar ikke imot
+                                </h3>
+                                <ul class="space-y-2 text-sm text-gray-700">
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Asbestmaterialer
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Farlig avfall
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Råteskadde materialer
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Ødelagt eller defekt utstyr
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Åpnede kjemikalier
+                                    </li>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        Produkter med mugg eller fuktskader
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donation Form -->
+                    <h2 id="donation-form" class="text-3xl font-bold text-blue-800 mb-6">Meld inn donasjon</h2>
+
+                    <form class="space-y-6 bg-gray-50 p-8 border rounded-xl shadow-sm">
+                        <div>
+                            <label class="block font-medium mb-2">Navn *</label>
+                            <input type="text" class="w-full border rounded-lg px-4 py-3" required>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">E-post *</label>
+                            <input type="email" class="w-full border rounded-lg px-4 py-3" required>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Telefon *</label>
+                            <input type="tel" class="w-full border rounded-lg px-4 py-3" required>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Beskrivelse av materialer *</label>
+                            <textarea class="w-full border rounded-lg px-4 py-3" rows="5" required></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-2">Last opp bilder (valgfritt)</label>
+                            <input type="file" multiple class="w-full">
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-lg">
+                            Send inn donasjon
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column - Contact Info -->
+                <div class="md:col-span-2 order-1 md:order-2">
+                    <div class=" top-24 bg-blue-50 p-8 rounded-2xl border border-blue-200 shadow-sm">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">Kontakt oss om donasjon</h3>
+
+                        <p class="text-gray-700 mb-4">Har du spørsmål om donasjon av byggevarer? Ta gjerne kontakt!</p>
+
+                        <ul class="space-y-4 text-gray-700">
+                            <li>
+                                <strong>Telefon:</strong><br>
+                                22 12 02 84
+                            </li>
+                            <li>
+                                <strong>E-post:</strong><br>
+                                post@ombygg.no
+                            </li>
+                            <li>
+                                <strong>Åpningstider:</strong><br>
+                                Bedriftskunder: Man–Ons: 09:00–15:00<br>
+                                Privatkunder: Man-Ons: 12:30-15:00
+                            </li>
+                        </ul>
+
+                        <a href="kontakt.html"
+                            class="mt-6 block text-center bg-blue-700 text-white py-3 rounded-lg font-medium hover:bg-blue-800 transition">
+                            Kontakt oss
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
